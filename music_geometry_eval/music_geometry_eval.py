@@ -155,7 +155,7 @@ def calculate_time_supported_limited_macroharmony(time_rep_song, span_size=12, s
 		number_of_spans = (len(grid_16th_song) - span_size)/slide_windowsize + 1
 
 		span_scores = []
-		for i in range(number_of_spans):
+		for i in range(int(number_of_spans)):
 			span_scores.append(local_lim_macrohar(grid_16th_song[i*slide_windowsize:i*slide_windowsize + span_size], lower_limit, upper_limit))
 
 		result = sum(span_scores)/float(number_of_spans)
@@ -189,7 +189,7 @@ def calculate_time_supported_centricity(time_rep_song, span_size=12, slide_windo
 		number_of_spans = (len(grid_16th_song) - span_size)/slide_windowsize + 1
 
 		span_scores = []
-		for i in range(number_of_spans):
+		for i in range(int(number_of_spans)):
 
 			span_scores.append(local_centricity_simple(grid_16th_song[i*slide_windowsize:i*slide_windowsize + span_size]))
 
